@@ -24,7 +24,7 @@ public class RegionDao {
     }
 
     public List<RegionEntity> findAll() {
-        return em.createQuery("FROM Region", RegionEntity.class).getResultList();
+        return em.createQuery("FROM RegionEntity", RegionEntity.class).getResultList();
     }
 
     public void update(RegionEntity region) {
