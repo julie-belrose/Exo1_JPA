@@ -6,7 +6,16 @@ import java.util.List;
 
 import org.example.enums.Category;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class SpecieEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +28,8 @@ public class SpecieEntity {
     private Category category;
 
     @ManyToMany(mappedBy = "species")
-    private final List<RegionEntity> regions = new ArrayList<>();{
+    private final List<RegionEntity> regions = new ArrayList<>();
 
-    }
+    @OneToMany(mappedBy = "specie", cascade = CascadeType.ALL)
+    private List<ObservationEntity> observations = new ArrayList<>();
 }

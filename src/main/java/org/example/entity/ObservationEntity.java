@@ -3,10 +3,16 @@ package org.example.entity;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-import org.example.entity.TravelLogEntity;
-import org.example.entity.SpecieEntity;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
-
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class ObservationEntity {
 
     @Id
@@ -25,4 +31,8 @@ public class ObservationEntity {
 
     @OneToOne(mappedBy = "observation", cascade = CascadeType.ALL)
     private TravelLogEntity travelLog;
+
+    public void setObserverName(String observerName) {
+        this.observerName = observerName;
+    }
 }

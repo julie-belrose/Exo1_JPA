@@ -12,7 +12,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "region")
 public class RegionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,4 +27,5 @@ public class RegionEntity {
 
     @ManyToMany
     private List<SpecieEntity> species = new ArrayList<>();
+
 }

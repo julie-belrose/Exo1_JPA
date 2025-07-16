@@ -1,13 +1,19 @@
 package org.example.entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.example.enums.TravelMode;
-import org.example.entity.ObservationEntity;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
 public class TravelLogEntity {
 
     @Id
