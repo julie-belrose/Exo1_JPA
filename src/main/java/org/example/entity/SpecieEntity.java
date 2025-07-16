@@ -32,4 +32,14 @@ public class SpecieEntity {
 
     @OneToMany(mappedBy = "specie", cascade = CascadeType.ALL)
     private List<ObservationEntity> observations = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "SpecieEntity{" +
+                "id=" + id +
+                ", commonName='" + commonName + '\'' +
+                ", scientificName='" + scientificName + '\'' +
+                ", category=" + category +
+                '}';
+    }
 }
