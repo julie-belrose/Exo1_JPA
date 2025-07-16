@@ -4,6 +4,8 @@ import lombok.*;
 import org.example.enums.Climate;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -23,4 +25,7 @@ public class RegionEntity {
 
     @Enumerated(EnumType.STRING)
     private Climate climate;
+
+    @ManyToMany
+    private List<SpecieEntity> species = new ArrayList<>();
 }

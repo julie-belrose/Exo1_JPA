@@ -1,8 +1,10 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              version="2.2">
     <persistence-unit name="regionPU">
-        <class>org.example.entity.Region</class>
-        <class>org.example.entity.Climate</class>
+        <class>org.example.entity.RegionEntity</class>
+        <class>org.example.entity.SpecieEntity</class>
+        <class>org.example.entity.ObservationEntity</class>
+        <class>org.example.entity.TravelLogEntity</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test;DB_CLOSE_DELAY=-1"/>
